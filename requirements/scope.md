@@ -1,7 +1,10 @@
-## Purpose
+## Project Context
 
-The system allows clients of the same bank to transfer funds
-to another client using the recipient's phone number.
+The bank already has registered customers, customer accounts,
+authentication, and a mobile banking application.
+
+This project focuses on designing the internal money transfer module.
+
 # Project Scope
 
 ## In Scope
