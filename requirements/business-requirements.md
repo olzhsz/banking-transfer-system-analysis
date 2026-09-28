@@ -10,7 +10,7 @@ Business goals:
 3. Make the limit status transparent to the client.
 4. Provide the client with the ability to view their transfer history independently.
 
-Business Requirments:
+Business Requirements:
 1. Clients must have an alternative way to identify a transfer recipient without using card details.
 2. The client must receive information about the result of the transfer in a timely manner.
 3. The client must receive up-to-date information regarding transfer limits.
