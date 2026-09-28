@@ -1,11 +1,11 @@
+# Project Scope
+
 ## Project Context
 
 The bank already has registered customers, customer accounts,
 authentication, and a mobile banking application.
 
 This project focuses on designing the internal money transfer module.
-
-# Project Scope
 
 ## In Scope
 
