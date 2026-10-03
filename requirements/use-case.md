@@ -85,7 +85,7 @@ A money transfer involving the client reaches a final status.
 2. The client's device does not display the notification because notifications are disabled.
 3. The transfer information remains available inside the banking application.
 
-A2 — Notification Service unavailable
+#### A2 — Notification Service Unavailable
 
 1. The Banking Transfer System cannot deliver the transfer result to the Notification Service.
 2. The notification is not sent immediately.
@@ -189,3 +189,68 @@ The client requests to view their transfer history.
 
 - The client receives access to their available transfer history for the previous 12 months.
 - No transfer data is modified.
+
+## UC-005 — Transfer Money
+
+### Description
+
+The client transfers money to another client of the same bank.
+
+### Primary Actor
+
+Bank Client
+
+### Supporting Actor
+
+Account Service
+
+### Preconditions
+
+- The client is authenticated.
+- The client has an active bank account.
+- The recipient has been successfully identified.
+
+### Trigger
+
+The client initiates a money transfer to the selected recipient.
+
+### Main Flow
+
+1. The client enters the transfer amount.
+2. The system validates the entered amount.
+3. The system requests the sender's available balance from the Account Service.
+4. The Account Service returns the current balance information.
+5. The system verifies that the sender has sufficient funds.
+6. The system verifies that the transfer does not exceed the client's transfer limit.
+7. The system presents the transfer details to the client for confirmation.
+8. The client confirms the transfer.
+9. The system requests the Account Service to debit the sender's account and credit the recipient's account.
+10. The Account Service completes the operation and returns the result.
+11. The system records the transfer.
+12. The system displays the successful transfer result to the client.
+
+### Alternative Flows
+
+#### A1 — Insufficient Funds
+
+1. The system determines that the sender does not have sufficient funds.
+2. The system informs the client that the available balance is insufficient.
+3. The client enters a lower amount or cancels the transfer.
+
+#### A2 — Transfer Limit Exceeded
+
+1. The system determines that the transfer would exceed the client's available limit.
+2. The system informs the client about the limit restriction.
+3. The client enters a lower amount or cancels the transfer.
+
+#### A3 — Transfer Failed
+
+1. The Account Service cannot complete the debit or credit operation.
+2. The system marks the transfer as failed.
+3. The system informs the client that the transfer was not completed.
+
+### Postconditions
+
+- The transfer is recorded with its final status.
+- If the transfer is successful, the sender's and recipient's account balances are updated.
+- The client's available transfer limit is updated if applicable.
