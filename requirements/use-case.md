@@ -95,3 +95,48 @@ A2 — Notification Service unavailable
 
 - The transfer result is recorded in the banking system.
 - If notifications are enabled, the client receives information about the transfer result.
+
+## UC-003 — View Transfer Limit
+
+### Description
+
+The client views up-to-date information about the used and remaining monthly transfer limit.
+
+### Primary Actor
+
+Bank Client
+
+### Supporting Actor
+
+Account Service
+
+### Preconditions
+
+- The client is authenticated.
+- The client has an active bank account.
+
+### Trigger
+
+The client requests information about their current transfer limit.
+
+### Main Flow
+
+1. The client opens the transfer limits section.
+2. The system requests the client's current transfer limit information from the Account Service.
+3. The Account Service determines the client's used transfer amount for the current monthly period.
+4. The Account Service calculates the remaining transfer limit.
+5. The Account Service returns the limit information to the system.
+6. The system displays the used and remaining transfer limit to the client.
+
+### Alternative Flows
+
+#### A1 — Limit Information Unavailable
+
+1. The system cannot retrieve the client's transfer limit information.
+2. The system informs the client that the information is temporarily unavailable.
+3. The use case ends.
+
+### Postconditions
+
+- The client receives the current monthly transfer limit information.
+- The client's transfer limit remains unchanged.
