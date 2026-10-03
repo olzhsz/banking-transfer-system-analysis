@@ -140,3 +140,52 @@ The client requests information about their current transfer limit.
 
 - The client receives the current monthly transfer limit information.
 - The client's transfer limit remains unchanged.
+
+## UC-004 — View Transfer History
+
+### Description
+
+The client views their transfer history for the previous 12 months.
+
+### Primary Actor
+
+Bank Client
+
+### Supporting Actor
+
+Account Service
+
+### Preconditions
+
+- The client is authenticated.
+- The client has an active bank account.
+
+### Trigger
+
+The client requests to view their transfer history.
+
+### Main Flow
+
+1. The client opens the transfer history section.
+2. The system requests the client's transfer history from the Account Service.
+3. The Account Service retrieves transfers involving the client from the previous 12 months.
+4. The Account Service returns the transfer history to the system.
+5. The system displays the transfer history to the client.
+
+### Alternative Flows
+
+#### A1 — Transfer History Unavailable
+
+1. The system cannot retrieve the client's transfer history.
+2. The system informs the client that the information is temporarily unavailable.
+3. The use case ends.
+
+#### A2 — No Transfers Found
+
+1. The Account Service finds no transfers for the client during the selected period.
+2. The system informs the client that no transfer history is available for that period.
+
+### Postconditions
+
+- The client receives access to their available transfer history for the previous 12 months.
+- No transfer data is modified.
