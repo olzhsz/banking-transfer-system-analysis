@@ -37,3 +37,10 @@
 ### NFR-009
 
 95% of transfer history requests shall complete within 5 seconds.
+
+
+## Availability
+
+### NFR-010
+
+The system shall maintain at least 99.99% availability per calendar month, excluding scheduled maintenance.
