@@ -44,3 +44,17 @@
 ### NFR-010
 
 The system shall maintain at least 99.99% availability per calendar month, excluding scheduled maintenance.
+
+## Reliability
+
+### NFR-011
+
+A failure of the Banking Transfer System shall not cause failures in the Account Service or Notification Service.
+
+### NFR-012
+
+After repeated failures from a dependent service, the system shall temporarily stop sending requests to that service and resume requests after the service becomes available again.
+
+### NFR-013
+
+The system shall retry failed requests using exponential backoff with a maximum of 3 retry attempts.
