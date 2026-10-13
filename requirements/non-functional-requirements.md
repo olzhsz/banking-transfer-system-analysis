@@ -79,3 +79,25 @@ The system shall prevent clients from accessing account and transfer information
 ### NFR-018
 
 The system shall not expose sensitive authentication or account information in application logs.
+
+## Audit and Logging
+
+### NFR-019
+
+The system shall log every initiated money transfer with the transfer ID, client ID, timestamp, amount, and initial status.
+
+### NFR-020
+
+The system shall log the final status of every transfer, including successful and failed transfers.
+
+### NFR-021
+
+The system shall log failed interactions with the Account Service and Notification Service.
+
+### NFR-022
+
+The system shall log transfer limit validation failures.
+
+### NFR-023
+
+The system shall prevent sensitive authentication data from being stored in logs.
