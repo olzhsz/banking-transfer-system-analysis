@@ -38,7 +38,6 @@
 
 95% of transfer history requests shall complete within 5 seconds.
 
-
 ## Availability
 
 ### NFR-010
@@ -58,3 +57,25 @@ After repeated failures from a dependent service, the system shall temporarily s
 ### NFR-013
 
 The system shall retry failed requests using exponential backoff with a maximum of 3 retry attempts.
+
+## Security
+
+### NFR-014
+
+The system shall allow access to transfer operations only for authenticated clients.
+
+### NFR-015
+
+The system shall enforce the principle of least privilege for access to system resources.
+
+### NFR-016
+
+The system shall encrypt data transmitted between system components using secure communication protocols.
+
+### NFR-017
+
+The system shall prevent clients from accessing account and transfer information belonging to other clients, except transfers in which they participated.
+
+### NFR-018
+
+The system shall not expose sensitive authentication or account information in application logs.
