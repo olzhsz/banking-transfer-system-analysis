@@ -90,7 +90,7 @@ The system shall log every initiated money transfer with the transfer ID, client
 
 The system shall log the final status of every transfer, including successful and failed transfers.
 
-### NFR-021
+* [ ] NFR-021
 
 The system shall log failed interactions with the Account Service and Notification Service.
 
@@ -101,3 +101,32 @@ The system shall log transfer limit validation failures.
 ### NFR-023
 
 The system shall prevent sensitive authentication data from being stored in logs.
+
+
+## Scalability
+
+### NFR-024
+
+The system shall support at least 1,000 concurrent active users without violating the defined performance requirements.
+
+### NFR-025
+
+The system shall process at least 100 transfer requests per second while maintaining the defined response time requirements.
+
+### NFR-026
+
+The system shall support horizontal scaling by adding additional application instances without requiring changes to client applications.
+
+## Usability
+
+### NFR-027
+
+At least 95% of users participating in usability testing shall be able to find a recipient and initiate a transfer without assistance.
+
+### NFR-028
+
+At least 95% of users participating in usability testing shall be able to complete the standard money transfer flow within 2 minutes.
+
+### NFR-029
+
+The system shall display transfer statuses and error messages using clear, user-readable language without exposing internal technical details.
