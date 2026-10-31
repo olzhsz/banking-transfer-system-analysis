@@ -10,3 +10,9 @@ view transaction history, and receive transfer notifications.
 The project includes business and system requirements,
 user stories, use cases, BPMN/UML diagrams, ERD,
 REST API specifications, SQL, and integration design.
+
+## System Context Diagram
+
+The diagram illustrates the interactions between the Banking Transfer System, Bank Client, Account Service, and Notification Service.
+
+![System Context Diagram](diagrams/context-diagram.png)
